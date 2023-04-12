@@ -1,6 +1,6 @@
-if !exists("g:ezgreekKey")
-    let g:ezgreekKey = "\<C-G>"
+if !exists("g:hellenikaKey")
+    let g:hellenikaKey = "\<C-G>"
 end
 
-execute "inoremap " . g:ezgreekKey . " <Esc>:call ezgreek#setup()<Cr>:call feedkeys('i" . g:ezgreekKey . "')<Cr>"
+execute "inoremap " . g:hellenikaKey . " <Esc>:call hellenika#setup()<Cr>:call feedkeys('i" . g:hellenikaKey . "')<Cr>"
 

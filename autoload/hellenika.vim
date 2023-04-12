@@ -1,5 +1,5 @@
 " Return the lowercase latin equivalent for the input greek letter
-function ezgreek#LatinEquivalent(greek)
+function hellenika#LatinEquivalent(greek)
     let l:l = tolower(a:greek)
     if l:l == "α"
         return ["a"]
@@ -56,13 +56,13 @@ function ezgreek#LatinEquivalent(greek)
     endif
 endfunction
 
-function ezgreek#setup()
+function hellenika#setup()
     for l:letter in ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ", "ς", "τ", "υ", "φ", "χ", "ψ", "ω"]
-        for l:translit in ezgreek#LatinEquivalent(l:letter)
-            execute "inoremap " . g:ezgreekKey . l:translit . " " . l:letter
-            execute "inoremap " . g:ezgreekKey . toupper(l:translit) . " " . toupper(l:letter)
+        for l:translit in hellenika#LatinEquivalent(l:letter)
+            execute "inoremap " . g:hellenikaKey . l:translit . " " . l:letter
+            execute "inoremap " . g:hellenikaKey . toupper(l:translit) . " " . toupper(l:letter)
         endfor
     endfor
-    execute "inoremap " . g:ezgreekKey . " <Nop>"
+    execute "inoremap " . g:hellenikaKey . " <Nop>"
 endfunction
 

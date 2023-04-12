@@ -1,4 +1,4 @@
-# EZ Greek
+# Vim Hellenika
 
 Easily write Greek letters in Vim.
 
@@ -38,9 +38,9 @@ In insert mode, press the plugin's keybinding (default to `<C-G>`), then press t
 
 ## Changing the plugin's keybinding
 
-If you want to change the plugin's keybinding to be something other than `<C-G>`, you can do so by specifying the variable `g:ezgreekKey`.
+If you want to change the plugin's keybinding to be something other than `<C-G>`, you can do so by specifying the variable `g:hellenikaKey`.
 
-If you want to specify it using `<>` notation, you must expand the notation for the plugin to work. For example, if you want to use `<C-P>`, you must put in your vimrc `let g:ezgreekKey = "\<C-P>"`.
+If you want to specify it using `<>` notation, you must expand the notation for the plugin to work. For example, if you want to use `<C-P>`, you must put in your vimrc `let g:hellenikaKey = "\<C-P>"`.
 
 ## Installation
 
