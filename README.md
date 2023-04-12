@@ -28,6 +28,7 @@ In insert mode, press the plugin's keybinding (default to `<C-G>`), then press t
 |π           |p              |
 |ρ           |r, rh          |
 |σ           |s              |
+|ς           |ss, se         |
 |τ           |t              |
 |υ           |u, y           |
 |φ           |ph, f          |

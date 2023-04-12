@@ -49,13 +49,15 @@ function ezgreek#LatinEquivalent(greek)
         return ["ps"]
     elseif l:l == "ω"
         return ["oo", "om"]
+    elseif l:l == "ς"
+        return ["ss", "se"]
     else
         echoerr "Error, unexpected letter '" . a:greek .  "'."
     endif
 endfunction
 
 function ezgreek#setup()
-    for l:letter in ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ", "τ", "υ", "φ", "χ", "ψ", "ω"]
+    for l:letter in ["α", "β", "γ", "δ", "ε", "ζ", "η", "θ", "ι", "κ", "λ", "μ", "ν", "ξ", "ο", "π", "ρ", "σ", "ς", "τ", "υ", "φ", "χ", "ψ", "ω"]
         for l:translit in ezgreek#LatinEquivalent(l:letter)
             execute "inoremap " . g:ezgreekKey . l:translit . " " . l:letter
             execute "inoremap " . g:ezgreekKey . toupper(l:translit) . " " . toupper(l:letter)
